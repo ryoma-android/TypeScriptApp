@@ -6,6 +6,7 @@ import RegisterPage from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
 import TravelFormPage from './pages/TravelFormPage';
 import TravelDetailPage from './pages/TravelDetailPage';
+import ProfilePage from './pages/ProfilePage';
 import './App.css';
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -54,6 +55,14 @@ const App: React.FC = () => {
             element={
               <ProtectedRoute>
                 <TravelFormPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <ProfilePage />
               </ProtectedRoute>
             }
           />

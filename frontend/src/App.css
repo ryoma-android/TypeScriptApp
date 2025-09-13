@@ -586,3 +586,297 @@ body {
     border-radius: 0 0 10px 10px;
   }
 }
+
+/* 検索・フィルター */
+.search-filter {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 15px;
+  align-items: end;
+}
+
+.search-input input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.filter-group select,
+.sort-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background: white;
+}
+
+/* 統計情報 */
+.statistics {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.statistics h3 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.stat-card {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+}
+
+/* セクションヘッダー */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.section-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* プロフィール */
+.profile-header {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-header h1 {
+  color: #333;
+  margin: 0;
+}
+
+.profile-info {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.profile-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #667eea;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.profile-details h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.profile-details p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.profile-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stat-item {
+  display: flex;
+  gap: 10px;
+}
+
+.stat-label {
+  font-weight: bold;
+  color: #666;
+}
+
+.stat-value {
+  color: #333;
+}
+
+/* 通知 */
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.notifications-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.notification-item {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.notification-item.unread {
+  background: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content h4 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.notification-content p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.notification-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.notification-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* お気に入り */
+.favorites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.favorite-item {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.favorite-content h4 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.favorite-content p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* レスポンシブ更新 */
+@media (max-width: 768px) {
+  .search-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .profile-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .notification-item,
+  .favorite-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .notification-actions {
+    justify-content: flex-end;
+  }
+}
